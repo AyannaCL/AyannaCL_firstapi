@@ -10,7 +10,6 @@ const getStudents = async ( req, res) => {
      
 };
 
-// Get a single student by ID
 const getStudent = async (req, res) => {
   try {
     const student = await Student.getStudentById(req.params.id);
@@ -25,7 +24,6 @@ const getStudent = async (req, res) => {
   }
 };
 
-// Add a new student
 const addStudent = async (req, res) => {
   try {
     const result = await Student.createStudent(req.body);
@@ -38,7 +36,6 @@ const addStudent = async (req, res) => {
   }
 };
 
-// Edit a student
 const editStudent = async (req, res) => {
   try {
     await Student.updateStudent(req.params.id, req.body);
@@ -48,7 +45,6 @@ const editStudent = async (req, res) => {
   }
 };
 
-// Change student status
 const changeStudentStatus = async (req, res) => {
   try {
     const { status } = req.body;
@@ -59,7 +55,6 @@ const changeStudentStatus = async (req, res) => {
   }
 };
 
-// Remove a student
 const removeStudent = async (req, res) => {
   try {
     await Student.deleteStudent(req.params.id);

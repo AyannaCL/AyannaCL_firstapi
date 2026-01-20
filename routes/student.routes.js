@@ -9,9 +9,9 @@ const {
     editStudent,
     changeStudentStatus,
     removeStudent,
-} = require("../controllers/student.controller"); // updated path
+} = require("../controllers/student.controller");
 
-// Routes
+
 router.get('/', getStudents);
 router.get('/:id', getStudent);
 router.post('/', addStudent);
